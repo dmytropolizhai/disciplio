@@ -1,11 +1,11 @@
-import { useExtendedColorScheme } from "@/hooks/use-extended-color-scheme";
+import { useColorScheme } from "@/hooks/use-color-scheme";
 import { Button } from "../core/button";
 import { Icon } from "../core/icon";
 import { Text } from "../core/text";
 import { useTranslation } from "react-i18next";
 
 export const ThemeToggle = () => {
-  const { colorScheme,  toggleColorScheme, colorIcon } = useExtendedColorScheme();
+  const { colorScheme,  toggleColorScheme, colorIcon } = useColorScheme();
   const { t } = useTranslation("common", { keyPrefix: "screen.settings.theme.options" })
 
   return (
