@@ -1,26 +1,36 @@
 {
-    "screen": {
-        "dashboard": {
-            "title": "Dashboard"
-        },
-        "home": {
-            "title": "Home"
-        },
-        "settings": {
-            "title": "Settings",
-            "theme": {
-                "title": "Theme",
-                "description": "Select theme.",
-                "options": {
-                    "dark": "Dark",
-                    "light": "Light"
-                }
-            },
-            "language": {
-                "title": "Language",
-                "description": "Select language.",
-                "placeholder": "Select language"
-            }
+  "screen": {
+    "todo": {
+      "title": "ToDo"
+    },
+    "dashboard": {
+      "title": "Dashboard"
+    },
+    "home": {
+      "title": "Home"
+    },
+    "settings": {
+      "title": "Settings",
+      "theme": {
+        "title": "Theme",
+        "description": "Select theme.",
+        "options": {
+          "dark": "Dark",
+          "light": "Light"
         }
+        },
+      "language": {
+        "title": "Language",
+        "description": "Select language.",
+        "placeholder": "Select language"
+      }
     }
+  },
+  "shared": {
+    "button": {
+      "complete": {
+       "label": "Completed"
+      }
+    }
+  }
 }
