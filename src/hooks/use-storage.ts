@@ -10,9 +10,9 @@ import { useCallback, useEffect, useState } from "react";
  */
 export function useStorage<T extends string>(
   key: string,
-  initialValue: T | null | undefined = null
+  initialValue: T | undefined = undefined
 ) {
-  const [storedValue, setStoredValue] = useState<T | null | undefined>(initialValue);
+  const [storedValue, setStoredValue] = useState<T | undefined>(initialValue);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
@@ -35,11 +35,11 @@ export function useStorage<T extends string>(
 
   // Function to update storage and state
   const setValue = useCallback(
-    async (value: T | null | undefined) => {
+    async (value: T | undefined) => {
       try {
         setError(null);
-        if (value === null) {
-          setStoredValue(null);
+        if (value === undefined) {
+          setStoredValue(undefined);
         } else {
           await AsyncStorage.save(key, value!);
           setStoredValue(value);
