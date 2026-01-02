@@ -8,41 +8,32 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
-import { useStorage } from "@/hooks/use-storage"
 import { LanguageOptionList } from "./lib/language-option-list"
 import { useTranslation } from "react-i18next"
-import { useEffect } from 'react';
-import { Language, isLanguage } from '@/types/language';
-import { getOptionByLanguage } from '@/components/feature/language/lib/utils';
-
+import { useStorage } from '@/hooks/use-storage';
+import { getOptionByLanguage } from './lib/utils';
+import { Language } from '@/types/language';
 
 export const LanguageSelect = () => {
-    const { t, i18n } = useTranslation("common", { keyPrefix: "screen.settings.language" });
-    const [language, setLanguage] = useStorage<Language>("lang", "en");
+    const { t, i18n } = useTranslation("screen.settings.language");
+    const [language, setLanguage] = useStorage<Language>("language", "en");
 
-    useEffect(() => {
-      if (!language) return;
-      i18n.changeLanguage(language);
-    }, [language]);
-
-    function handleOnValueChange(option: Option) {
+    const handleOnValueChange = (option: Option) => {
       if (!option) return;
 
       const { value } = option;
-      if (isLanguage(value)) {
-        i18n.changeLanguage(value);
-        setLanguage(value);
-      }
+      i18n.changeLanguage(value as Language);
+      setLanguage(value as Language);
     }
 
     return (
-        <Select value={getOptionByLanguage(language!)} onValueChange={handleOnValueChange} >
+        <Select value={getOptionByLanguage(language)} onValueChange={handleOnValueChange} >
             <SelectTrigger>
                 <SelectValue placeholder={t("placeholder")} />
             </SelectTrigger>
             <SelectContent >
                 <SelectGroup>
-                    <SelectLabel>{t("title")}</SelectLabel>
+                    <SelectLabel>{t("description")}</SelectLabel>
                     {LanguageOptionList.map(lang => (
                         <SelectItem key={lang.value} label={lang.label} value={lang.value}>
                             {lang.label}

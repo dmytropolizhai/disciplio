@@ -17,8 +17,9 @@
                 }
             },
             "language": {
-                "title": "Мова",
-                "description": "Виберіть мову."
+              "title": "Мова",
+              "description": "Виберіть мову.",
+              "placeholder": "Select language"
             }
         }
     }

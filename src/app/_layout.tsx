@@ -6,7 +6,7 @@ import { ThemeProvider } from '@react-navigation/native';
 import { PortalHost } from "@rn-primitives/portal"
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { useColorScheme } from 'nativewind';
+import { useColorScheme } from '@/hooks/use-color-scheme';
 
 export default function RootLayout() {
   const { colorScheme } = useColorScheme();
