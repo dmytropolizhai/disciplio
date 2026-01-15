@@ -1,73 +1,76 @@
-# Minimal Template
 
-This is a [React Native](https://reactnative.dev/) project built with [Expo](https://expo.dev/) and [React Native Reusables](https://reactnativereusables.com).
 
-It was initialized using the following command:
 
+![Logo](./assets/previews/readme.webp)
+
+# Disciplio
+
+Disciplio helps you build self-discipline through habits, routines, and consistency.
+Stay focused, track progress, and create a disciplined life — one day at a time.
+
+# Getting Started
+
+Follow the steps below to run Disciplio locally.
+
+## Prerequisites
+
+
+- Node.js (LTS recommended)
+
+- `npm` or `yarn`
+
+- Expo CLI
+
+Install Expo CLI: 
 ```bash
-npx @react-native-reusables/cli@latest init -t .
+npm install -g expo-cli
 ```
 
-## Getting Started
-
-To run the development server:
+## Installation
 
 ```bash
-    npm run dev
-    # or
-    yarn dev
-    # or
-    pnpm dev
-    # or
-    bun dev
+git clone https://github.com/your-username/disciplio.git
+cd disciplio
+npm install
+# or
+yarn install
 ```
-
-This will start the Expo Dev Server. Open the app in:
-
-- **iOS**: press `i` to launch in the iOS simulator _(Mac only)_
-- **Android**: press `a` to launch in the Android emulator
-- **Web**: press `w` to run in a browser
-
-You can also scan the QR code using the [Expo Go](https://expo.dev/go) app on your device. This project fully supports running in Expo Go for quick testing on physical devices.
-
-## Adding components
-
-You can add more reusable components using the CLI:
+## Running the App
 
 ```bash
-npx react-native-reusables/cli@latest add [...components]
+expo start
 ```
 
-> e.g. `npx react-native-reusables/cli@latest add input textarea`
+## Run the app on:
+- Android Emulator
+- iOS Simulator
+- Physical device using Expo Go
 
-If you don't specify any component names, you'll be prompted to select which components to add interactively. Use the `--all` flag to install all available components at once.
+# Technologies Used
 
-## Project Features
+## Expo
+Development platform for building and running the app.
 
-- ⚛️ Built with [Expo Router](https://expo.dev/router)
-- 🎨 Styled with [Tailwind CSS](https://tailwindcss.com/) via [Nativewind](https://www.nativewind.dev/)
-- 📦 UI powered by [React Native Reusables](https://github.com/founded-labs/react-native-reusables)
-- 🚀 New Architecture enabled
-- 🔥 Edge to Edge enabled
-- 📱 Runs on iOS, Android, and Web
+## React Native
+Cross-platform mobile application framework with native performance.
 
-## Learn More
+## Local Storage
+Stores lightweight data such as user preferences and app state.
 
-To dive deeper into the technologies used:
+## SQLite Database
+Persistent local storage for habits, routines, and progress tracking.
 
-- [React Native Docs](https://reactnative.dev/docs/getting-started)
-- [Expo Docs](https://docs.expo.dev/)
-- [Nativewind Docs](https://www.nativewind.dev/)
-- [React Native Reusables](https://reactnativereusables.com)
+# Features
 
-## Deploy with EAS
+- Habit and routine tracking
+- Daily progress monitoring
+- Offline-first experience
+- Clean and minimal productivity-focused UI
 
-The easiest way to deploy your app is with [Expo Application Services (EAS)](https://expo.dev/eas).
+# License
+MIT License
 
-- [EAS Build](https://docs.expo.dev/build/introduction/)
-- [EAS Updates](https://docs.expo.dev/eas-update/introduction/)
-- [EAS Submit](https://docs.expo.dev/submit/introduction/)
+# Vision
 
----
-
-If you enjoy using React Native Reusables, please consider giving it a ⭐ on [GitHub](https://github.com/founded-labs/react-native-reusables). Your support means a lot!
+*Discipline is built through small, consistent actions.
+Disciplio focuses on progress over perfection.*
