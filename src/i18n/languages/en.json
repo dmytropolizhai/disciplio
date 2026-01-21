@@ -18,7 +18,7 @@
           "dark": "Dark",
           "light": "Light"
         }
-        },
+      },
       "language": {
         "title": "Language",
         "description": "Select language.",
@@ -26,30 +26,30 @@
       }
     }
   },
-    "modals": {
-       "create-task": {
-            "title": "Create Task",
-            "input": {
-                "task-name": {
-                    "label": "Name",
-                    "placeholder": "Shop",
-                    "required": "Task name is required to create task!"
-                },
-                "task-description": {
-                    "label": "Description",
-                    "placeholder": "Fruits, Bananas, Two Chickens"
-                },
-                "task-deadline": {
-                    "label": "Deadline"
-                }
-            }
-
+  "modals": {
+    "create-task": {
+      "title": "Create Task",
+      "input": {
+        "task-name": {
+          "label": "Name",
+          "placeholder": "Shop",
+          "required": "Task name is required to create task!"
+        },
+        "task-description": {
+          "label": "Description",
+          "placeholder": "Fruits, Bananas, Two Chickens"
+        },
+        "task-deadline": {
+          "label": "Deadline",
+          "required": "Deadline is required to create task!"
         }
-    },
+      }
+    }
+  },
   "shared": {
     "button": {
       "complete": {
-       "label": "Completed"
+        "label": "Completed"
       },
       "todo-add-button": {
         "label": "Add Task"
