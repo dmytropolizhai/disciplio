@@ -3,6 +3,9 @@ import { Input, InputProps } from '@/components/ui/input'
 import { FormController } from './form-controller'
 
 type FormInputProps = {
+    /**
+     * Validation rules for the input field.
+     */
     rules?: RegisterOptions
 } & InputProps
 
