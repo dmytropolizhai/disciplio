@@ -8,18 +8,12 @@ import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { Suspense } from 'react';
-import { openDatabaseSync, SQLiteProvider } from 'expo-sqlite';
+import { SQLiteProvider } from 'expo-sqlite';
 import { ActivityIndicator } from 'react-native';
 import { DATABASE_NAME } from '@/database/schema';
-import migrations from '@/database/drizzle/migrations';
-import { drizzle } from 'drizzle-orm/expo-sqlite';
-import { useMigrations } from 'drizzle-orm/expo-sqlite/migrator';
 
 export default function RootLayout() {
   const { colorScheme } = useColorScheme();
-  const expoDb = openDatabaseSync(DATABASE_NAME);
-  const db = drizzle(expoDb);
-  const { success, error } = useMigrations(db, migrations);
 
   return (
     <Suspense fallback={<ActivityIndicator size="large" />} >
