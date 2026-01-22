@@ -1,8 +1,8 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "fdcc8e61-5eb5-4310-8694-0f233021f46e",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "61aa6d83-f8a6-4bd8-a844-e8991f9fe16f",
+  "prevId": "fdcc8e61-5eb5-4310-8694-0f233021f46e",
   "tables": {
     "tasks": {
       "name": "tasks",
@@ -34,6 +34,29 @@
           "primaryKey": false,
           "notNull": false,
           "autoincrement": false
+        },
+        "deadline": {
+          "name": "deadline",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "now()"
         }
       },
       "indexes": {},
